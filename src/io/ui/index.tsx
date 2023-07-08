@@ -24,6 +24,7 @@ export function handler(state: IState) {
 const App: React.FC = () => {
   useEffect(() => {
     const subscription = EventSubject.subscribe((event) => {
+      // @ts-ignore
       decoupler.sendAction(event);
     });
 

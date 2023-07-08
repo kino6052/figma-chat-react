@@ -7,7 +7,6 @@ const wait = (ms: number) =>
   });
 
 const getRandomMessage = () => {
-  const index = Math.floor(Math.random() * 10);
   const messages = [
     "I see, I see...",
     "Hm...",
@@ -23,6 +22,8 @@ const getRandomMessage = () => {
 
     "Be right back",
   ];
+
+  const index = Math.floor(Math.random() * messages.length);
 
   return messages[Math.min(index, messages.length - 1)];
 };
