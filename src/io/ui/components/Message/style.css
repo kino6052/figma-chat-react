@@ -1,0 +1,49 @@
+.message {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #cdcdcd33;
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  width: 343px;
+  overflow: hidden;
+  flex-basis: 32px;
+  min-height: 32px;
+}
+
+.message .avatar-instance {
+  min-width: 30px !important;
+  width: unset !important;
+}
+
+.message .instance-node {
+  font-family: "Inter", Helvetica !important;
+  font-weight: 100 !important;
+}
+
+.message .avatar-1 {
+  height: 30px !important;
+  min-width: 30px !important;
+  position: relative !important;
+}
+
+.message .this-is-text {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.message.bot {
+  background-color: #2e2f3a;
+}
+
+.message.user {
+  background-color: #444654;
+}

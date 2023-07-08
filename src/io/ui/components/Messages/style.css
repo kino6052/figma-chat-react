@@ -1,0 +1,15 @@
+.messages {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 419px;
+  height: 100%;
+  overflow: auto;
+}
+
+.messages .message-instance {
+  align-self: stretch !important;
+  width: unset !important;
+}
