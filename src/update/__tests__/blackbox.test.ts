@@ -1,4 +1,4 @@
-import { initialState } from "../../index";
+import { initialState } from "../../bridge";
 import { EActionType, EControlId } from "../../types";
 import { compose } from "../index";
 
@@ -7,14 +7,14 @@ describe("Blackbox tests", () => {
     const result = compose(initialState)([
       {
         id: {
-          id: EControlId.Input
+          id: EControlId.Input,
         },
         type: EActionType.Change,
-        payload: "test"
-      }
+        payload: "test",
+      },
     ]);
     expect(result).toMatchObject({
-      input: "test"
+      input: "test",
     });
   });
 
@@ -22,21 +22,21 @@ describe("Blackbox tests", () => {
     const result = compose(initialState)([
       {
         id: {
-          id: EControlId.Input
+          id: EControlId.Input,
         },
         type: EActionType.Change,
-        payload: "test"
+        payload: "test",
       },
       {
         id: {
-          id: EControlId.Input
+          id: EControlId.Input,
         },
-        type: EActionType.Enter
-      }
+        type: EActionType.Enter,
+      },
     ]);
     expect(result).toMatchObject({
       input: "",
-      messages: [{ text: "test" }]
+      messages: [{ text: "test" }],
     });
   });
 });

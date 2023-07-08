@@ -1,8 +1,8 @@
-import { App } from "./App";
-import { IState } from "../../types";
+import { App } from "../io/ui/App";
+import { IState } from "../types";
 
 // Start the decouupler
-import "../../index";
+import "../index";
 
 const initialState: IState = {
   input: "",

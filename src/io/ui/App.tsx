@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom/client";
 import { BehaviorSubject } from "rxjs";
-import { decoupler, initialState } from "../..";
-import { IState } from "../../types";
+import { decoupler } from "../..";
+import { initialState } from "../../bridge";
 import { ChatFrame } from "./components/ChatFrame";
 import { selectMainProps } from "./selectors";
+import "./style.css";
 import { EventSubject } from "./utils/EventWrapper";
 import { useSharedState } from "./utils/useSharedState";
-import "./style.css";
 
 // NOTE: Here is the necessary set up for the UI IO agent
 

@@ -13,11 +13,19 @@ export function handler(state: IState) {
   PropsSubject.next(props);
 }
 
-const rootElement = document.getElementById("root")!;
-const root = ReactDOM.createRoot(rootElement);
+const init = () => {
+  try {
+    const rootElement = document.getElementById("root")!;
+    const root = ReactDOM.createRoot(rootElement);
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+init();

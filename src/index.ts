@@ -3,12 +3,7 @@ import { EActionType, EControlId, IState } from "./types";
 import { update } from "./update";
 import { handler as uiHandler } from "./io/ui";
 import { handler as communicationHandler } from "./io/communication";
-
-export const initialState: IState = {
-  input: "",
-  messages: [],
-  isLoading: false
-};
+import { initialState } from "./bridge";
 
 export const decoupler = new Decoupler<
   IState,
