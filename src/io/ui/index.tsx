@@ -3,9 +3,14 @@ import ReactDOM from "react-dom/client";
 import { IState } from "../../types";
 import { selectMainProps } from "./selectors";
 import "./style.css";
-import { App, PropsSubject } from "./App";
+import { App } from "./App";
+import { BehaviorSubject } from "rxjs";
+import { initialState } from "../../bridge";
 
 // NOTE: Here is the necessary set up for the UI IO agent
+export const PropsSubject = new BehaviorSubject<
+  ReturnType<typeof selectMainProps>
+>(selectMainProps(initialState));
 
 export function handler(state: IState) {
   const props = selectMainProps(state);
