@@ -3,6 +3,7 @@ import { selectMainProps } from "../selectors";
 import { EventSubject } from "./EventWrapper";
 import { useSharedState } from "./useSharedState";
 import { PropsSubject } from "../index";
+import { decoupler } from "../../..";
 
 export function withDecoupler(
   WrappedComponent: React.FC<ReturnType<typeof selectMainProps>>

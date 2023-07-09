@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { ChatFrame } from ".";
+import { ChatFrame } from "../io/ui/components/ChatFrame";
 
 const meta: Meta<typeof ChatFrame> = {
   title: "Decoupler/StateVisualization",
