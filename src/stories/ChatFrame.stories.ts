@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Meta, StoryObj } from "@storybook/react";
 import { ChatFrame } from "../io/ui/components/ChatFrame";
 
